@@ -2,7 +2,7 @@
 " Author:        name - name@company.com
 " Departments:   department
 " Created:       2017-09-14 10:34:45
-" Last modified: 2017-09-14 17:34:40
+" LastModified: 2017-09-14 17:34:40
 " Filename:      mysettings.vim
 " Description:   
 "-----------------------------------------------------------------------------
@@ -137,7 +137,7 @@ function AddNewTitle()
     call append(1,"# Author:        name - name@company.com")
     call append(2,"# Department:    department")
     call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# Last modified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(4,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(5,"# Filename:      ".expand("%:t"))
     call append(6,"# Description:   ")
     call append(7,"-----------------------------------------------------------------------------*/")
@@ -147,7 +147,7 @@ endf
 
 function UpdateTitle()
     normal m'
-    call setline(5,"# Last modified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call setline(5,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
     normal ''
     normal mk
     call setline(6,"# Filename:      ".expand("%:t"))
@@ -179,7 +179,7 @@ function AddNewShellTitle()
     call append(1,"# Author:        name - name@company.com")
     call append(2,"# Departments:   department")
     call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# Last modified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(4,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(5,"# Filename:      ".expand("%:t"))
     call append(6,"# Description:   ")
     call append(7,"#-----------------------------------------------------------------------------")
@@ -210,7 +210,7 @@ function AddNewLuaTitle()
     call append(1,"# Author:        name - name@company.com")
     call append(2,"# Departments:   department")
     call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# Last modified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(4,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(5,"# Filename:      ".expand("%:t"))
     call append(6,"# Description:   ")
     call append(7,"-------------------------------------------------------------------------------]]")
@@ -220,7 +220,7 @@ endf
 
 function UpdateLuaTitle()
     normal m'
-    call setline(5,"# Last modified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call setline(5,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
     normal ''
     normal mk
     call setline(6,"# Filename:      ".expand("%:t"))
@@ -249,7 +249,7 @@ function AddNewVimTitle()
     call append(1,"\" Author:        name - name@company.com")
     call append(2,"\" Departments:   department")
     call append(3,"\" Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"\" Last modified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(4,"\" LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(5,"\" Filename:      ".expand("%:t"))
     call append(6,"\" Description:   ")
     call append(7,"\"-----------------------------------------------------------------------------")
@@ -259,7 +259,7 @@ endf
 
 function UpdateVimTitle()
     normal m'
-    call setline(5,"\" Last modified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call setline(5,"\" LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
     normal ''
     normal mk
     call setline(6,"\" Filename:      ".expand("%:t"))
@@ -454,8 +454,8 @@ let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#ycm#error_symbol = 'E:'
 let g:airline#extensions#ycm#warning_symbol = 'W:'
 " switch to next buffer
-nnoremap <silent> <c-tab> :bn<cr>
-nnoremap <silent> <s-tab> :bp<cr>
+nnoremap <silent> <C-n> :bn<cr>
+nnoremap <silent> <C-p> :bp<cr>
 " close buffer or buffers,command :%bd will close all buffers
 nnoremap <silent> <C-g> :bd<cr>
 
