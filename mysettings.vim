@@ -2,7 +2,7 @@
 " Author:        name - name@company.com
 " Departments:   department
 " Created:       2017-09-14 10:34:45
-" LastModified: 2017-09-14 17:34:40
+" LastModified:  2017-09-14 23:35:19
 " Filename:      mysettings.vim
 " Description:   
 "-----------------------------------------------------------------------------
@@ -136,7 +136,7 @@ function AddNewTitle()
     call append(1,"# Author:        name - name@company.com")
     call append(2,"# Department:    department")
     call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(5,"# Filename:      ".expand("%:t"))
     call append(6,"# Description:   ")
     call append(7,"-----------------------------------------------------------------------------*/")
@@ -146,7 +146,7 @@ endf
 
 function UpdateTitle()
     normal m'
-    call setline(5,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call setline(5,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
     normal ''
     normal mk
     call setline(6,"# Filename:      ".expand("%:t"))
@@ -161,7 +161,7 @@ function AddTitle()
     "默认为添加
     while n < 10
         let line = getline(n)
-        if line =~ '^\#\s*\S*Last\smodified:\S*.*$'
+        if line =~ '^\#\s*\S*LastModified:\S*.*$'
             call UpdateTitle()
             return
         endif
@@ -178,7 +178,7 @@ function AddNewShellTitle()
     call append(1,"# Author:        name - name@company.com")
     call append(2,"# Departments:   department")
     call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(5,"# Filename:      ".expand("%:t"))
     call append(6,"# Description:   ")
     call append(7,"#-----------------------------------------------------------------------------")
@@ -192,7 +192,7 @@ function AddShellTitle()
     "默认为添加
     while n < 10
         let line = getline(n)
-        if line =~ '^\#\s*\S*Last\smodified:\S*.*$'
+        if line =~ '^\#\s*\S*LastModified:\S*.*$'
             call UpdateTitle()
             return
         endif
@@ -209,7 +209,7 @@ function AddNewLuaTitle()
     call append(1,"# Author:        name - name@company.com")
     call append(2,"# Departments:   department")
     call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(5,"# Filename:      ".expand("%:t"))
     call append(6,"# Description:   ")
     call append(7,"-------------------------------------------------------------------------------]]")
@@ -219,7 +219,7 @@ endf
 
 function UpdateLuaTitle()
     normal m'
-    call setline(5,"# LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call setline(5,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
     normal ''
     normal mk
     call setline(6,"# Filename:      ".expand("%:t"))
@@ -233,7 +233,7 @@ function AddLuaTitle()
     let n = 1
     while n < 10
         let line = getline(n)
-        if line =~ '^\#\s*\S*Last\smodified:\S*.*$'
+        if line =~ '^\#\s*\S*LastModified:\S*.*$'
             call UpdateLuaTitle()
             return
         endif
@@ -248,7 +248,7 @@ function AddNewVimTitle()
     call append(1,"\" Author:        name - name@company.com")
     call append(2,"\" Departments:   department")
     call append(3,"\" Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"\" LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(4,"\" LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
     call append(5,"\" Filename:      ".expand("%:t"))
     call append(6,"\" Description:   ")
     call append(7,"\"-----------------------------------------------------------------------------")
@@ -258,7 +258,7 @@ endf
 
 function UpdateVimTitle()
     normal m'
-    call setline(5,"\" LastModified: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call setline(5,"\" LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
     normal ''
     normal mk
     call setline(6,"\" Filename:      ".expand("%:t"))
@@ -272,7 +272,7 @@ function AddVimTitle()
     let n = 1
     while n < 10
         let line = getline(n)
-        if line =~ '^\"\s*\S*Last\smodified:\S*.*$'
+        if line =~ '^\"\s*\S*LastModified:\S*.*$'
             call UpdateVimTitle()
             return
         endif
