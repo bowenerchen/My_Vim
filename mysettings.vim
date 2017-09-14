@@ -34,7 +34,7 @@ set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%] " My Status line forma
 set vb t_vb=                                    " Close bell voice
 set noeb                                        " Close Input Error Voice
 set backspace=indent,eol,start                  " Set backspace can delete all words
-set scrolloff=3                                 " 5 lines form Top or Buttom
+"set scrolloff=3                                 " 5 lines form Top or Buttom
 syntax on                                       " code show high light
 
 " Setting for Split windows
@@ -59,7 +59,6 @@ filetype plugin on
 filetype indent on
 
 " Mouse Settings
-set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 
