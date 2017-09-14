@@ -2,7 +2,7 @@
 " Author:        name - name@company.com
 " Departments:   department
 " Created:       2017-09-14 10:34:45
-" Last modified: 2017-09-14 10:34:45
+" Last modified: 2017-09-14 17:34:40
 " Filename:      mysettings.vim
 " Description:   
 "-----------------------------------------------------------------------------
@@ -42,6 +42,16 @@ set fillchars=vert:\ ,stl:\ ,stlnc:\
 
 " Theme
 colorscheme molokai_dark
+
+" Set Visual mode backgroud color
+highlight Visual cterm=NONE ctermbg=DarkGrey ctermfg=NONE guibg=Gray
+
+" Set comment color
+highlight Comment ctermfg=Blue
+
+" Set cursorline colors 
+"highlight Cursor ctermfg=DarkBlue
+
 
 " File Type Open
 filetype on
