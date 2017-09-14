@@ -28,6 +28,15 @@ show match window: "<"
 show next match: "<Ctrl-u>"
 show previous match: "<Ctrl-d>" 
 
+分屏操作
+上下分割当前打开的文件 Ctrl+W s
+上下分割，并打开一个新的文件 :sp filename
+左右分割当前打开的文件 Ctrl+W v
+左右分割，并打开一个新的文件 :vsp filename
+关闭当前窗口 Ctrl+W c
+关闭当前窗口，如果只剩最后一个了，则退出Vim Ctrl+W q
+把光标移到下一个的屏中 Ctrl+W w
+
 Keys Mapping:
 主要有map，noremap，unmap，mapclear四个 命令，并且有四个前缀i,c,n,v修饰
  
