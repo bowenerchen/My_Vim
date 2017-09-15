@@ -2,7 +2,7 @@
 " Author:        name - name@company.com
 " Departments:   department
 " Created:       2017-09-14 10:34:45
-" LastModified:  2017-09-14 23:35:19
+" LastModified:  2017-09-15 08:32:25
 " Filename:      mysettings.vim
 " Description:   
 "-----------------------------------------------------------------------------
@@ -52,6 +52,8 @@ highlight Comment ctermfg=Blue
 " Set cursorline colors 
 "highlight Cursor ctermfg=DarkBlue
 
+" Set line number color
+highlight LineNr ctermfg=White
 
 " File Type Open
 filetype on
