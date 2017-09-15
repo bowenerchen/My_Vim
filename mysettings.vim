@@ -50,7 +50,7 @@ highlight Visual cterm=NONE ctermbg=DarkGrey ctermfg=NONE guibg=Gray
 highlight Comment ctermfg=Blue
 
 " Set cursorline colors 
-"highlight Cursor ctermfg=DarkBlue
+highlight Cursor ctermfg=DarkBlue
 
 " Set line number color
 highlight LineNr ctermfg=White
