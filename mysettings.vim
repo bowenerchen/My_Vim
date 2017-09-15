@@ -64,8 +64,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" Mouse Settings
-set selection=exclusive
+"" Mouse Settings
+set selection=inclusive "don't exclusive the last word
 set selectmode=mouse,key
 
 "remember last position
@@ -286,7 +286,7 @@ function AddVimTitle()
     endwhile
     call AddNewVimTitle()
 endfunction
-" -------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------------------
 
 " set fold/unfold all key
 function ForceFoldmethodIndent()
@@ -439,7 +439,7 @@ if has('autocmd')
     aug END
 endif
 
-"================================
+""================================
 "------------plugins-------------
 " airline parameters
 let g:airline_theme = 'dark'
