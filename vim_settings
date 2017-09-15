@@ -28,6 +28,9 @@ show match window: "<"
 show next match: "<Ctrl-u>"
 show previous match: "<Ctrl-d>" 
 
+P 在光标后插入
+p 在光标前插入
+
 分屏操作
 上下分割当前打开的文件 Ctrl+W s
 上下分割，并打开一个新的文件 :sp filename
