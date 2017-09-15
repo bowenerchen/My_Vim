@@ -50,7 +50,11 @@ highlight Visual cterm=NONE ctermbg=DarkGrey ctermfg=NONE guibg=Gray
 highlight Comment ctermfg=Blue
 
 " Set cursorline colors 
-highlight Cursor ctermfg=DarkBlue
+"highlight Cursor ctermfg=NONE guifg=NONE ctermbg=DarkGrey guibg=Gray 
+if has('multi_byte_ime')
+	    highlight Cursor guifg=NONE guibg=Green
+	    highlight CursorIM guifg=NONE guibg=Purple
+endif
 
 " Set line number color
 highlight LineNr ctermfg=White
