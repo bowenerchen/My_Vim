@@ -1,15 +1,15 @@
 "-----------------------------------------------------------------------------
-" Author:        name - name@company.com
-" Departments:   department
-" Created:       2017-09-14 10:34:45
-" LastModified:  2017-09-16 10:51:44
-" Filename:      mysettings.vim
-" Description:   
-"-----------------------------------------------------------------------------
+" -Author:        name - name@company.com
+" -Departments:   department
+" -Created:       2017-09-14 10:34:45
+" -LastModified:  2017-09-16 10:51:44
+" -Filename:      mysettings.vim
+" -Description:   
+"------------------------------------------------------------------------------
 
 
-"================================
-"----------base config-----------
+"=-===============================
+"-----------base config-----------
 " basic setup
 set hlsearch                                    " High light search
 set ts=4                                        " 1 tab = 4 space
@@ -38,7 +38,7 @@ set guifont=Monospace\ 16                        " Set Font Size
 "set scrolloff=3                                " 5 lines form Top or Buttom
 syntax on                                       " code show high light
 
-" GVim Max Window
+"" GVim Max Window
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window (for an alternative on Windows, see simalt below).
@@ -54,11 +54,15 @@ else
 "  endif
 endif
 
-" Setting for Split windows
+"" Setting for Split windows
 set fillchars=vert:\ ,stl:\ ,stlnc:\  
 
 " Theme
-colorscheme molokai_dark
+if exists($DISPLAY)
+    colorscheme molokai_dark
+else 
+    colorscheme default
+endif
 
 " Set Visual mode backgroud color
 highlight Visual cterm=NONE ctermbg=DarkGrey ctermfg=NONE guibg=Gray
@@ -69,8 +73,8 @@ highlight Comment ctermfg=Blue
 " Set cursorline colors 
 "highlight Cursor ctermfg=NONE guifg=NONE ctermbg=DarkGrey guibg=Gray 
 if has('multi_byte_ime')
-	    highlight Cursor guifg=NONE guibg=Green
-	    highlight CursorIM guifg=NONE guibg=Purple
+        highlight Cursor guifg=NONE guibg=Green
+        highlight CursorIM guifg=NONE guibg=Purple
 endif
 
 " Set line number color
