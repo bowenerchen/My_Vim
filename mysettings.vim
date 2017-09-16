@@ -58,11 +58,9 @@ endif
 set fillchars=vert:\ ,stl:\ ,stlnc:\  
 
 " Theme
-if exists($DISPLAY)
-    colorscheme molokai_dark
-else 
-    colorscheme default
-endif
+"colorscheme molokai_dark
+"colorscheme default
+colorscheme desert
 
 " Set Visual mode backgroud color
 highlight Visual cterm=NONE ctermbg=DarkGrey ctermfg=NONE guibg=Gray
