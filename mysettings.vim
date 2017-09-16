@@ -78,7 +78,8 @@ if has('multi_byte_ime')
 endif
 
 " Set line number color
-highlight LineNr ctermfg=White
+" highlight LineNr ctermfg=White
+  highlight LineNr ctermfg=Gray
 
 " File Type Open
 filetype on
