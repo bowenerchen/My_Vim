@@ -21,8 +21,8 @@ set smarttab                                    " Use shift width when inseting 
 "set cursorcolumn                               " high light current column
 set nobackup                                    " No Backup Files
 set noswapfile                                  " No Swap Files
-set guioptions-=T                               " No tools shown
-set guioptions-=m                               " No Menu Shown
+"set guioptions-=T                               " No tools shown
+"set guioptions-=m                               " No Menu Shown
 set ruler                                       " Show cursor line and cloum in status line
 set showmatch                                   " Show match e.g. '(' and ')'
 set incsearch                                   " Search while input key words
@@ -43,7 +43,8 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window (for an alternative on Windows, see simalt below).
   set lines=40 columns=120
-  "au GUIEnter * call MaximizeWindow()
+  "colorscheme molokai_dark
+  colorscheme torte
 else
 "  " This is console Vim.
 "  if exists("+lines")
@@ -52,15 +53,16 @@ else
 "  if exists("+columns")
 "    set columns=100
 "  endif
+"  Theme /usr/share/vim/vim74/colors
+"  colorscheme molokai_dark
+"  colorscheme desert
+"  colorscheme default
+"  colorscheme koehler
+   colorscheme delek
 endif
 
 "" Setting for Split windows
 set fillchars=vert:\ ,stl:\ ,stlnc:\  
-
-" Theme /usr/share/vim/vim74/colors
-"colorscheme molokai_dark
-"colorscheme default
-colorscheme desert
 
 " Set Visual mode backgroud color
 highlight Visual cterm=NONE ctermbg=DarkGrey ctermfg=NONE guibg=Gray
