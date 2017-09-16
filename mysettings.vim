@@ -34,8 +34,25 @@ set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%] " My Status line forma
 set vb t_vb=                                    " Close bell voice
 set noeb                                        " Close Input Error Voice
 set backspace=indent,eol,start                  " Set backspace can delete all words
-"set scrolloff=3                                 " 5 lines form Top or Buttom
+set guifont=Monospace\ 16                        " Set Font Size
+"set scrolloff=3                                " 5 lines form Top or Buttom
 syntax on                                       " code show high light
+
+" GVim Max Window
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window (for an alternative on Windows, see simalt below).
+  set lines=40 columns=120
+  "au GUIEnter * call MaximizeWindow()
+else
+  " This is console Vim.
+  if exists("+lines")
+    set lines=50
+  endif
+  if exists("+columns")
+    set columns=100
+  endif
+endif
 
 " Setting for Split windows
 set fillchars=vert:\ ,stl:\ ,stlnc:\  
