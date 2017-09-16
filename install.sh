@@ -27,18 +27,15 @@ then
 
 fi
 
-#sudo git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 unzip ./bundle.zip
-
 unzip ./go.zip
-
 chmod +x ./set_vim.sh
-
 sudo /bin/bash ./set_vim.sh
 
-git clone https://github.com/Valloric/YouCompleteMe.git ./bundle/
-cd ./bundle/YouCompleteMe
-git submodule update --init --recursive
-./install.py --clang-completer --gocode-completer 
-cd -
+#git clone https://github.com/Valloric/YouCompleteMe.git ./bundle/
+#cd ./bundle/YouCompleteMe
+#git submodule update --init --recursive
+#./install.py --clang-completer --gocode-completer 
+#cd -

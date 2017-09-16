@@ -583,42 +583,42 @@ au filetype c,cpp,go,sh nnoremap <silent> < :call QuickFixToggle()<cr>
 au filetype c,cpp,java,go,sh nnoremap <silent> <c-u> :call QuickFixNext()<cr>
 au filetype c,cpp,java,go,sh nnoremap <silent> <c-d> :call QuickFixPrevious()<cr>
 
-"-----------------ycm-----------------
-set completeopt-=preview
-au bufread,bufnewfile *.c let g:ycm_global_ycm_extra_conf = '~/.vim/ycm/c/.ycm_extra_conf.py'
-au bufread,bufnewfile *.h,*.hpp,*.cpp,*.cc,*.cxx,*.java let g:ycm_global_ycm_extra_conf = '~/.vim/ycm/cpp/.ycm_extra_conf.py'
-if filereadable('.ycm_extra_conf.py')
-    let g:ycm_global_ycm_extra_conf = './.ycm_extra_conf.py'
-endif
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
-let g:ycm_min_num_of_chars_for_completion = 2
-" let g:ycm_cache_omnifunc = 0
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_filetype_blacklist = { 'tagbar' : 1,'nerdtree' : 1, }
-let g:ycm_semantic_triggers = { 'c' : ['->', '.'], 'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'], 'ocaml' : ['.', '#'], 'cpp,objcpp' : ['->', '.', '::'],  'perl' : ['->'], 'php' : ['->', '::'], 'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'], 'ruby' : ['.', '::'], 'erlang' : [':'],}
-let g:ycm_error_symbol = '!!'
-let g:ycm_warning_symbol = '??'
-let g:ycm_always_populate_location_list = 1
-let g:ycm_open_loclist_on_ycm_diags = 0
-let g:ycm_enable_diagnostic_signs = 1
-let g:ycm_enable_diagnostic_highlighting = 1
-let g:ycm_register_as_syntastic_checker = 1
-let g:Show_diagnostics_ui = 1
-let g:ycm_goto_buffer_command = 'same-buffer'
-let g:ycm_filetype_whitelist = { '*': 1 }
-" let g:ycm_key_list_select_completion = ['<c-tab>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<c-s-tab>', '<Up>']
-"let g:ycm_key_list_select_completion = ['<Down>']
-"let g:ycm_key_list_previous_completion = ['<Up>']
-" let g:SuperTabDefaultCompletionType = '<c-tab>'
-"let g:ycm_key_invoke_completion = '<C-Space>'
-set pumheight=20
-" 只能是 #include 或已打开的文件
-au filetype c,cpp,objc,objcpp,cs,go,sh nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<cr>
+"""-----------------ycm-----------------
+""set completeopt-=preview
+""au bufread,bufnewfile *.c let g:ycm_global_ycm_extra_conf = '~/.vim/ycm/c/.ycm_extra_conf.py'
+""au bufread,bufnewfile *.h,*.hpp,*.cpp,*.cc,*.cxx,*.java let g:ycm_global_ycm_extra_conf = '~/.vim/ycm/cpp/.ycm_extra_conf.py'
+""if filereadable('.ycm_extra_conf.py')
+""    let g:ycm_global_ycm_extra_conf = './.ycm_extra_conf.py'
+""endif
+""let g:ycm_confirm_extra_conf = 0
+""let g:ycm_collect_identifiers_from_tags_files = 1
+""let g:ycm_collect_identifiers_from_comments_and_strings = 0
+""let g:ycm_min_num_of_chars_for_completion = 2
+""" let g:ycm_cache_omnifunc = 0
+""let g:ycm_seed_identifiers_with_syntax = 1
+""let g:ycm_complete_in_comments = 1
+""let g:ycm_complete_in_strings = 1
+""let g:ycm_filetype_blacklist = { 'tagbar' : 1,'nerdtree' : 1, }
+""let g:ycm_semantic_triggers = { 'c' : ['->', '.'], 'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'], 'ocaml' : ['.', '#'], 'cpp,objcpp' : ['->', '.', '::'],  'perl' : ['->'], 'php' : ['->', '::'], 'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'], 'ruby' : ['.', '::'], 'erlang' : [':'],}
+""let g:ycm_error_symbol = '!!'
+""let g:ycm_warning_symbol = '??'
+""let g:ycm_always_populate_location_list = 1
+""let g:ycm_open_loclist_on_ycm_diags = 0
+""let g:ycm_enable_diagnostic_signs = 1
+""let g:ycm_enable_diagnostic_highlighting = 1
+""let g:ycm_register_as_syntastic_checker = 1
+""let g:Show_diagnostics_ui = 1
+""let g:ycm_goto_buffer_command = 'same-buffer'
+""let g:ycm_filetype_whitelist = { '*': 1 }
+""" let g:ycm_key_list_select_completion = ['<c-tab>', '<Down>']
+""" let g:ycm_key_list_previous_completion = ['<c-s-tab>', '<Up>']
+"""let g:ycm_key_list_select_completion = ['<Down>']
+"""let g:ycm_key_list_previous_completion = ['<Up>']
+""" let g:SuperTabDefaultCompletionType = '<c-tab>'
+"""let g:ycm_key_invoke_completion = '<C-Space>'
+""set pumheight=20
+""" 只能是 #include 或已打开的文件
+""au filetype c,cpp,objc,objcpp,cs,go,sh nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 
 " Call out the .h file 
