@@ -45,13 +45,13 @@ if has("gui_running")
   set lines=40 columns=120
   "au GUIEnter * call MaximizeWindow()
 else
-  " This is console Vim.
-  if exists("+lines")
-    set lines=50
-  endif
-  if exists("+columns")
-    set columns=100
-  endif
+"  " This is console Vim.
+"  if exists("+lines")
+"    set lines=50
+"  endif
+"  if exists("+columns")
+"    set columns=100
+"  endif
 endif
 
 " Setting for Split windows
