@@ -57,7 +57,7 @@ endif
 "" Setting for Split windows
 set fillchars=vert:\ ,stl:\ ,stlnc:\  
 
-" Theme
+" Theme /usr/share/vim/vim74/colors
 "colorscheme molokai_dark
 "colorscheme default
 colorscheme desert
