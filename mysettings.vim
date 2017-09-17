@@ -43,8 +43,8 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window (for an alternative on Windows, see simalt below).
   set lines=40 columns=120
-  "colorscheme molokai_dark
-  colorscheme torte
+  colorscheme molokai_dark
+  "colorscheme torte
 else
 "  " This is console Vim.
 "  if exists("+lines")
@@ -56,9 +56,9 @@ else
 "  Theme /usr/share/vim/vim74/colors
 "  colorscheme molokai_dark
 "  colorscheme desert
-"  colorscheme default
+   colorscheme default
 "  colorscheme koehler
-   colorscheme delek
+"  colorscheme delek
 endif
 
 "" Setting for Split windows
@@ -555,7 +555,7 @@ let g:go_fmt_autosave = 1
 let g:go_def_mode = 'godef'
 let g:go_fmt_command = 'goimports'
 let g:go_get_update = 0
-let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter']
+let g:syntastic_go_checkers = ['golint', 'govet', 'go', 'gometalinter']
 let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_fmt_fail_silently = 1
@@ -565,6 +565,7 @@ let g:go_highlight_format_strings = 1
 let g:go_autodetect_gopath = 1
 let g:go_template_autocreate = 1
 let g:go_template_file = "hello_world.go"
+let g:go_template_test_file = "hello_world_test.go"
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
