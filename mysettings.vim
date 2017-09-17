@@ -54,9 +54,9 @@ else
 "    set columns=100
 "  endif
 "  Theme /usr/share/vim/vim74/colors
-"  colorscheme molokai_dark
+   colorscheme molokai_dark
 "  colorscheme desert
-   colorscheme default
+"  colorscheme default
 "  colorscheme koehler
 "  colorscheme delek
 endif
