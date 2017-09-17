@@ -8,7 +8,7 @@
 "------------------------------------------------------------------------------
 
 
-"=-===============================
+"=================================
 "-----------base config-----------
 " basic setup
 set hlsearch                                    " High light search
@@ -555,9 +555,8 @@ let g:go_fmt_autosave = 1
 let g:go_def_mode = 'godef'
 let g:go_fmt_command = 'goimports'
 let g:go_get_update = 0
-let g:syntastic_go_checkers = ['golint', 'govet', 'go', 'gometalinter']
+let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter']
 let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_fmt_fail_silently = 1
 let g:go_list_type = 'quickfix'
 let g:go_def_reuse_buffer = 1
