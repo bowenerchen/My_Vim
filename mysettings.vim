@@ -547,18 +547,24 @@ let g:go_highlight_format_strings = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
-let g:go_highlight_types = 0
-let g:go_highlight_operators = 0
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_template_autocreate = 1
 let g:go_fmt_autosave = 1
 let g:go_def_mode = 'godef'
 let g:go_fmt_command = 'goimports'
 let g:go_get_update = 0
-let g:syntastic_go_checkers = [ 'go' ]
+let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter']
+let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_fmt_fail_silently = 1
 let g:go_list_type = 'quickfix'
 let g:go_def_reuse_buffer = 1
+let g:go_highlight_format_strings = 1
+let g:go_autodetect_gopath = 1
+let g:go_template_autocreate = 1
+let g:go_template_file = "hello_world.go"
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
