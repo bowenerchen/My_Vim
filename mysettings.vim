@@ -113,15 +113,17 @@ nnoremap ; :
 :command QA qa
 
 " automatically completed Brackets
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {<CR>}<Esc>O
-autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
-inoremap ) <c-r>=ClosePair(')')<CR>
-inoremap ] <c-r>=ClosePair(']')<CR>
-inoremap } <c-r>=CloseBracket()<CR>
-inoremap " <c-r>=QuoteDelim('"')<CR>
-inoremap ' <c-r>=QuoteDelim("'")<CR>
+"inoremap ( ()<Esc>i
+"inoremap [ []<Esc>i
+"inoremap { {<CR>}<Esc>O
+"autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
+"inoremap ) <c-r>=ClosePair(')')<CR>
+"inoremap ] <c-r>=ClosePair(']')<CR>
+"inoremap } <c-r>=CloseBracket()<CR>
+"inoremap \" <c-r>=QuoteDelim('"')<CR>
+"inoremap ' <c-r>=QuoteDelim("'")<CR>
+so ~/.vim/autoclose.vim
+let g:autoclose_vim_commentmode = 1
 
 " vim shortcut prefix key
 let mapleader = ","
