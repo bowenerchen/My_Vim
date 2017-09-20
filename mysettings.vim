@@ -365,22 +365,43 @@ let g:neocomplcache_enable_auto_select = 1
 let g:Neocomplachetag=1
 
 "-----------------cscope-----------------
+""if has("cscope")
+""set csprg=/usr/bin/cscope
+""set csto=0
+""set cst
+""set nocsverb
+""if filereadable("cscope.out")
+""    cs add cscope.out
+""elseif $CSCOPE_DB != ""
+""    cs add $CSCOPE_DB
+""endif
+""set csverb
+""endif
 set cscopequickfix=s-,c-,d-,i-,t-,e-
+set cscopetag
+""set cscopeverbose
+set cscopetagorder=1
 if has("cscope")
-set csprg=/usr/bin/cscope
-set csto=0
-set cst
-set nocsverb
-if filereadable("cscope.out")
-    cs add cscope.out
-elseif $CSCOPE_DB != ""
-    cs add $CSCOPE_DB
+    set csprg=/usr/bin/cscope
+    set csto=0
+    set cst
+    ""set csverb
+    set cspc=3
+    "add any database in current dir  
+    if filereadable("cscope.out")
+        cs add cscope.out
+    "else search cscope.out elsewhere  
+    else
+       let cscope_file=findfile("cscope.out", ".;")
+       let cscope_pre=matchstr(cscope_file, ".*/")
+       if !empty(cscope_file) && filereadable(cscope_file)
+           exe "cs add" cscope_file cscope_pre
+       endif
+     endif
 endif
-set csverb
-endif
-let g:cscope_silent = 1
+""let g:cscope_silent = 1
 let g:cscope_interested_files = '\.c$\|\.cpp$\|\.h$\|\.hpp$\|\.cc$\|\.java$\|\.go'
-let g:cscope_auto_update = 1
+""let g:cscope_auto_update = 1
 "find symbol
 au filetype c,cpp,go,sh nnoremap <leader>fs :cs find s <C-R>=expand("<cword>")<CR><CR>
 "find definition
