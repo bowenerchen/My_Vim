@@ -161,155 +161,155 @@ endf
 
 " -------------------------------------------------------------------------------------------------
 " Add C/C++/Golang Title
-function AddNewTitle()
-    call append(0,"/*-----------------------------------------------------------------------------")
-    call append(1,"# Author:        name - name@company.com")
-    call append(2,"# Department:    department")
-    call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(5,"# Filename:      ".expand("%:t"))
-    call append(6,"# Description:   ")
-    call append(7,"-----------------------------------------------------------------------------*/")
-    call append(8,"")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-endf
-
-function UpdateTitle()
-    normal m'
-    call setline(5,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
-    normal ''
-    normal mk
-    call setline(6,"# Filename:      ".expand("%:t"))
-    execute "noh"
-    normal 'k
-    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
-endfunction
-
-"for c/c++ golang and some language to add a info header
-function AddTitle()
-    let n = 1
-    "默认为添加
-    while n < 10
-        let line = getline(n)
-        if line =~ '^\#\s*\S*LastModified:\S*.*$'
-            call UpdateTitle()
-            return
-        endif
-        let n = n + 1
-    endwhile
-    call AddNewTitle()
-endfunction
-
-" -------------------------------------------------------------------------------------------------
-
-"for shell script to add a new info header
-function AddNewShellTitle()
-    call append(0,"#-----------------------------------------------------------------------------")
-    call append(1,"# Author:        name - name@company.com")
-    call append(2,"# Departments:   department")
-    call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(5,"# Filename:      ".expand("%:t"))
-    call append(6,"# Description:   ")
-    call append(7,"#-----------------------------------------------------------------------------")
-    call append(8,"")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-endf
-
-"for shell script to add header
-function AddShellTitle()
-    let n = 1
-    "默认为添加
-    while n < 10
-        let line = getline(n)
-        if line =~ '^\#\s*\S*LastModified:\S*.*$'
-            call UpdateTitle()
-            return
-        endif
-        let n = n + 1
-    endwhile
-    call AddNewShellTitle()
-endfunction
-
-" -------------------------------------------------------------------------------------------------
-
-"for lua language to add a info header
-function AddNewLuaTitle()
-    call append(0,"--[[-----------------------------------------------------------------------------")
-    call append(1,"# Author:        name - name@company.com")
-    call append(2,"# Departments:   department")
-    call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(5,"# Filename:      ".expand("%:t"))
-    call append(6,"# Description:   ")
-    call append(7,"-------------------------------------------------------------------------------]]")
-    call append(8,"")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-endf
-
-function UpdateLuaTitle()
-    normal m'
-    call setline(5,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
-    normal ''
-    normal mk
-    call setline(6,"# Filename:      ".expand("%:t"))
-    execute "noh"
-    normal 'k
-    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
-endfunction
-
-" for lua language to add a info header
-function AddLuaTitle()
-    let n = 1
-    while n < 10
-        let line = getline(n)
-        if line =~ '^\#\s*\S*LastModified:\S*.*$'
-            call UpdateLuaTitle()
-            return
-        endif
-        let n = n + 1
-    endwhile
-    call AddNewLuaTitle()
-endfunction
-" -------------------------------------------------------------------------------------------------
-"for vim files to add a info header
-function AddNewVimTitle()
-    call append(0,"\"-----------------------------------------------------------------------------")
-    call append(1,"\" Author:        name - name@company.com")
-    call append(2,"\" Departments:   department")
-    call append(3,"\" Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(4,"\" LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
-    call append(5,"\" Filename:      ".expand("%:t"))
-    call append(6,"\" Description:   ")
-    call append(7,"\"-----------------------------------------------------------------------------")
-    call append(8,"")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-endf
-
-function UpdateVimTitle()
-    normal m'
-    call setline(5,"\" LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
-    normal ''
-    normal mk
-    call setline(6,"\" Filename:      ".expand("%:t"))
-    execute "noh"
-    normal 'k
-    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
-endfunction
-
-" for Vim config files to add a info header
-function AddVimTitle()
-    let n = 1
-    while n < 10
-        let line = getline(n)
-        if line =~ '^\"\s*\S*LastModified:\S*.*$'
-            call UpdateVimTitle()
-            return
-        endif
-        let n = n + 1
-    endwhile
-    call AddNewVimTitle()
-endfunction
+"function AddNewTitle()
+"    call append(0,"/*-----------------------------------------------------------------------------")
+"    call append(1,"# Author:        name - name@company.com")
+"    call append(2,"# Department:    department")
+"    call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
+"    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
+"    call append(5,"# Filename:      ".expand("%:t"))
+"    call append(6,"# Description:   ")
+"    call append(7,"-----------------------------------------------------------------------------*/")
+"    call append(8,"")
+"    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
+"endf
+"
+"function UpdateTitle()
+"    normal m'
+"    call setline(5,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
+"    normal ''
+"    normal mk
+"    call setline(6,"# Filename:      ".expand("%:t"))
+"    execute "noh"
+"    normal 'k
+"    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
+"endfunction
+"
+""for c/c++ golang and some language to add a info header
+"function AddTitle()
+"    let n = 1
+"    "默认为添加
+"    while n < 10
+"        let line = getline(n)
+"        if line =~ '^\#\s*\S*LastModified:\S*.*$'
+"            call UpdateTitle()
+"            return
+"        endif
+"        let n = n + 1
+"    endwhile
+"    call AddNewTitle()
+"endfunction
+"
+"" -------------------------------------------------------------------------------------------------
+"
+""for shell script to add a new info header
+"function AddNewShellTitle()
+"    call append(0,"#-----------------------------------------------------------------------------")
+"    call append(1,"# Author:        name - name@company.com")
+"    call append(2,"# Departments:   department")
+"    call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
+"    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
+"    call append(5,"# Filename:      ".expand("%:t"))
+"    call append(6,"# Description:   ")
+"    call append(7,"#-----------------------------------------------------------------------------")
+"    call append(8,"")
+"    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
+"endf
+"
+""for shell script to add header
+"function AddShellTitle()
+"    let n = 1
+"    "默认为添加
+"    while n < 10
+"        let line = getline(n)
+"        if line =~ '^\#\s*\S*LastModified:\S*.*$'
+"            call UpdateTitle()
+"            return
+"        endif
+"        let n = n + 1
+"    endwhile
+"    call AddNewShellTitle()
+"endfunction
+"
+"" -------------------------------------------------------------------------------------------------
+"
+""for lua language to add a info header
+"function AddNewLuaTitle()
+"    call append(0,"--[[-----------------------------------------------------------------------------")
+"    call append(1,"# Author:        name - name@company.com")
+"    call append(2,"# Departments:   department")
+"    call append(3,"# Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
+"    call append(4,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
+"    call append(5,"# Filename:      ".expand("%:t"))
+"    call append(6,"# Description:   ")
+"    call append(7,"-------------------------------------------------------------------------------]]")
+"    call append(8,"")
+"    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
+"endf
+"
+"function UpdateLuaTitle()
+"    normal m'
+"    call setline(5,"# LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
+"    normal ''
+"    normal mk
+"    call setline(6,"# Filename:      ".expand("%:t"))
+"    execute "noh"
+"    normal 'k
+"    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
+"endfunction
+"
+"" for lua language to add a info header
+"function AddLuaTitle()
+"    let n = 1
+"    while n < 10
+"        let line = getline(n)
+"        if line =~ '^\#\s*\S*LastModified:\S*.*$'
+"            call UpdateLuaTitle()
+"            return
+"        endif
+"        let n = n + 1
+"    endwhile
+"    call AddNewLuaTitle()
+"endfunction
+"" -------------------------------------------------------------------------------------------------
+""for vim files to add a info header
+"function AddNewVimTitle()
+"    call append(0,"\"-----------------------------------------------------------------------------")
+"    call append(1,"\" Author:        name - name@company.com")
+"    call append(2,"\" Departments:   department")
+"    call append(3,"\" Created:       ".strftime("%Y-%m-%d %H:%M:%S"))
+"    call append(4,"\" LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
+"    call append(5,"\" Filename:      ".expand("%:t"))
+"    call append(6,"\" Description:   ")
+"    call append(7,"\"-----------------------------------------------------------------------------")
+"    call append(8,"")
+"    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
+"endf
+"
+"function UpdateVimTitle()
+"    normal m'
+"    call setline(5,"\" LastModified:  ".strftime("%Y-%m-%d %H:%M:%S"))
+"    normal ''
+"    normal mk
+"    call setline(6,"\" Filename:      ".expand("%:t"))
+"    execute "noh"
+"    normal 'k
+"    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
+"endfunction
+"
+"" for Vim config files to add a info header
+"function AddVimTitle()
+"    let n = 1
+"    while n < 10
+"        let line = getline(n)
+"        if line =~ '^\"\s*\S*LastModified:\S*.*$'
+"            call UpdateVimTitle()
+"            return
+"        endif
+"        let n = n + 1
+"    endwhile
+"    call AddNewVimTitle()
+"endfunction
 "-------------------------------------------------------------------------------------------------
 
 " set fold/unfold all key
@@ -533,7 +533,7 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_aggregate_errors = 1
 nnoremap <silent> <c-i> :call LocationPrevious()<cr>
 nnoremap <silent> <c-f> :call LocationNext()<cr>
-nnoremap <silent> > :call LocationToggle()<cr>
+nnoremap <silent> <c-e> :call LocationToggle()<cr>
 
 " vim-go
 let g:go_highlight_array_whitespace_error = 1
@@ -576,19 +576,19 @@ set completeopt-=preview
 let g:neocomplcache_enable_auto_select = 1 
 let g:Neocomplachetag=1
 
-"-----------------cscopex-----------------
+"-----------------cscope-----------------
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 if has("cscope")
-    set csprg=/usr/bin/cscope
-    set csto=0
-    set cst
-    set nocsverb
-    if filereadable("cscope.out")
-        cs add cscope.out
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-    endif
-    set csverb
+set csprg=/usr/bin/cscope
+set csto=0
+set cst
+set nocsverb
+if filereadable("cscope.out")
+    cs add cscope.out
+elseif $CSCOPE_DB != ""
+    cs add $CSCOPE_DB
+endif
+set csverb
 endif
 let g:cscope_silent = 1
 let g:cscope_interested_files = '\.c$\|\.cpp$\|\.h$\|\.hpp$\|\.cc$\|\.java$\|\.go'
@@ -608,10 +608,10 @@ au filetype c,cpp,go,sh nnoremap <leader>ff :cs find f <C-R>=expand("<cfile>")<C
 "find out which files had included this
 au filetype c,cpp,go,sh nnoremap <leader>fi :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
 "show match window or not
-au filetype c,cpp,go,sh nnoremap <silent> < :call QuickFixToggle()<cr>
+"au filetype c,cpp,go,sh nnoremap <silent> <c-t> :call QuickFixToggle()<cr>
 "next result,previous result
-au filetype c,cpp,java,go,sh nnoremap <silent> <c-u> :call QuickFixNext()<cr>
-au filetype c,cpp,java,go,sh nnoremap <silent> <c-d> :call QuickFixPrevious()<cr>
+au filetype c,cpp,go,sh nnoremap <silent> <c-u> :call QuickFixNext()<cr>
+au filetype c,cpp,go,sh nnoremap <silent> <c-d> :call QuickFixPrevious()<cr>
 
 """-----------------ycm-----------------
 ""set completeopt-=preview
@@ -655,9 +655,9 @@ au filetype c,cpp,java,go,sh nnoremap <silent> <c-d> :call QuickFixPrevious()<cr
 "au filetype c,cpp nnoremap <leader>aa :A<cr>
 
 " Other definitions
-au filetype c,cpp,go nmap <leader>tt :call AddTitle()<cr>
-au filetype java,javascript nmap <leader>tt :call AddTitle()<cr>
-au filetype sh nmap <leader>tt :call AddShellTitle()<cr>
-au filetype vim nmap <leader>tt :call AddVimTitle()<cr>
+"au filetype c,cpp,go nmap <leader>tt :call AddTitle()<cr>
+"au filetype java,javascript nmap <leader>tt :call AddTitle()<cr>
+"au filetype sh nmap <leader>tt :call AddShellTitle()<cr>
+"au filetype vim nmap <leader>tt :call AddVimTitle()<cr>
 "au filetype lua nmap <leader>tt :call AddLuaTitle()<cr>
 
