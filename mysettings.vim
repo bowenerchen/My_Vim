@@ -87,8 +87,8 @@ nnoremap ; :
 :command Qa qa
 :command QA qa
 
-so ~/.vim/autoclose.vim
-let g:autoclose_vim_commentmode = 1
+""so ~/.vim/autoclose.vim
+""let g:autoclose_vim_commentmode = 1
 
 " vim shortcut prefix key
 let mapleader = ","
@@ -99,7 +99,7 @@ let mapleader = ","
 " airline parameters
 let g:airline_theme = 'dark'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#symbol = '!'
 let g:airline_left_sep = ''
@@ -152,8 +152,8 @@ let g:syntastic_aggregate_errors = 1
 nnoremap <c-e> :Errors<cr>
 nnoremap <c-r> :lclose<cr>
 nnoremap <c-t> :SyntasticReset<cr>
-nnoremap <c-n> :lne<cr>
-nnoremap <c-m> :lp<cr>
+nnoremap <c-z> :lne<cr>
+nnoremap <c-f> :lp<cr>
 
 " vim-go
 let g:go_highlight_array_whitespace_error = 1
