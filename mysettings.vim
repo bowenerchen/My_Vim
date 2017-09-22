@@ -47,6 +47,7 @@ set backspace=indent,eol,start                  " Set backspace can delete all w
 set guifont=ubuntu\ mono\ 16                    " Set Font Size
 set ignorecase
 set smartcase
+set scrolloff=7
 syntax on                                       " code show high light
 colorscheme molokai_dark
 
