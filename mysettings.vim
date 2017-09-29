@@ -100,20 +100,20 @@ let mapleader = ","
 " airline parameters
 let g:airline_theme = 'dark'
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#whitespace#symbol = '!'
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#show_close_button = 1
-let g:airline#extensions#tabline#close_symbol = 'X'
-let g:airline#extensions#ycm#enabled = 1
-let g:airline#extensions#ycm#error_symbol = 'E:'
-let g:airline#extensions#ycm#warning_symbol = 'W:'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline#extensions#whitespace#enabled = 0
+"let g:airline#extensions#whitespace#symbol = '!'
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline#extensions#tabline#left_sep = ''
+"let g:airline#extensions#tabline#left_alt_sep = ''
+"let g:airline#extensions#tabline#show_close_button = 1
+"let g:airline#extensions#tabline#close_symbol = 'X'
+"let g:airline#extensions#ycm#enabled = 1
+"let g:airline#extensions#ycm#error_symbol = 'E:'
+"let g:airline#extensions#ycm#warning_symbol = 'W:'
 " switch to next buffer
 nnoremap <silent> <C-n> :bn<cr>
 nnoremap <silent> <C-p> :bp<cr>
@@ -238,8 +238,8 @@ nnoremap<C-d> :cp<cr>
 let g:indentLine_enabled = 1
 let g:indentLine_char = '┊'
 let g:indentLine_color_term = 239
-let g:indentLine_concealcursor = 'inc'
-set conceallevel=1
-let g:indentLine_conceallevel = 1
-let g:indentLine_bufNameExclude = ['NERD_tree.*','*.conf','*.txt']
+"let g:indentLine_concealcursor = 'inc'
+"set conceallevel=1
+"let g:indentLine_conceallevel = 1
+"let g:indentLine_bufNameExclude = ['NERD_tree.*','*.conf','*.txt']
 
