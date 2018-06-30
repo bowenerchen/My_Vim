@@ -146,10 +146,10 @@ let g:syntastic_style_error_symbol = '!E'
 let g:syntastic_warning_symbol = '?W'
 let g:syntastic_style_warning_symbol = '?W'
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"let g:syntastic_aggregate_errors = 1
+let g:syntastic_aggregate_errors = 1
 nnoremap <c-e> :Errors<cr>
 nnoremap <c-r> :lclose<cr>
 nnoremap <c-t> :SyntasticReset<cr>
