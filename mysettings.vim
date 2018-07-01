@@ -17,7 +17,7 @@ Plugin 'Shougo/neocomplcache'
 "go packages
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode'
-Plugin 'alecthomas/gometalinter'
+"Plugin 'alecthomas/gometalinter'
 Plugin 'kisielk/errcheck'
 Plugin 'zmb3/gogetdoc'
 
