@@ -27,7 +27,7 @@ then
 
 fi
 
-#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 unzip ./bundle.zip
 unzip ./go.zip
