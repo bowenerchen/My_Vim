@@ -198,8 +198,10 @@ let g:neocomplcache_enable_auto_select = 1
 let g:Neocomplachetag=1
 
 "-----------------cscope-----------------
-if has("cscope")
+if has("/usr/bin/cscope")
 set csprg=/usr/bin/cscope
+elseif has("/usr/local/bin/cscope")
+set csprg=/usr/local/bin/cscope
 set csto=0
 set cst
 set nocsverb
