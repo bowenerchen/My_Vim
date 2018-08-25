@@ -245,3 +245,35 @@ let g:indentLine_color_term = 239
 "let g:indentLine_conceallevel = 1
 "let g:indentLine_bufNameExclude = ['NERD_tree.*','*.conf','*.txt']
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Python自动缩进
+Plugin 'vim-scripts/indentpython.vim'
+
+"PEP8代码风格检查
+Plugin 'nvie/vim-flake8'
+
+"git集成
+Plugin 'tpope/vim-fugitive'
+
+"let python_highlight_all=1
+"syntax on
+
+"au BufNewFile,BufRead *.py
+"\ set tabstop=4
+"\ set softtabstop=4
+"\ set shiftwidth=4
+"\ set textwidth=79
+"\ set expandtab
+"\ set autoindent
+"\ set fileformat=unix
+
+"au BufNewFile,BufRead *.js, *.html, *.css
+"\ set tabstop=2
+"\ set softtabstop=2
+"\ set shiftwidth=2
+
+"标注不必要的空格
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"支持utf-8
+set encoding=utf-8
