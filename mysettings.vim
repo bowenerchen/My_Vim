@@ -9,7 +9,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-syntastic/syntastic'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tczengming/autoload_cscope.vim'
 Plugin 'Shougo/neocomplcache'
@@ -140,7 +140,7 @@ let g:tagbar_autoclose = 0
 nnoremap <silent> <leader>rr :TagbarToggle<cr>
 
 " syntastic
-"let g:syntastic_enable_signs = 1
+let g:syntastic_enable_signs = 0
 "let g:syntastic_error_symbol = 'E'
 "let g:syntastic_style_error_symbol = '!E'
 "let g:syntastic_warning_symbol = 'W'
