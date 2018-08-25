@@ -140,21 +140,21 @@ let g:tagbar_autoclose = 0
 nnoremap <silent> <leader>rr :TagbarToggle<cr>
 
 " syntastic
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol = '!E'
-let g:syntastic_style_error_symbol = '!E'
-let g:syntastic_warning_symbol = '?W'
-let g:syntastic_style_warning_symbol = '?W'
-let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_enable_signs = 1
+"let g:syntastic_error_symbol = 'E'
+"let g:syntastic_style_error_symbol = '!E'
+"let g:syntastic_warning_symbol = 'W'
+"let g:syntastic_style_warning_symbol = '?W'
+"let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-nnoremap <c-e> :Errors<cr>
-nnoremap <c-r> :lclose<cr>
-nnoremap <c-t> :SyntasticReset<cr>
-nnoremap <c-z> :lne<cr>
-nnoremap <c-f> :lp<cr>
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_aggregate_errors = 1
+"nnoremap <c-e> :Errors<cr>
+"nnoremap <c-r> :lclose<cr>
+"nnoremap <c-t> :SyntasticReset<cr>
+"nnoremap <c-z> :lne<cr>
+"nnoremap <c-f> :lp<cr>
 
 " vim-go
 let g:go_highlight_array_whitespace_error = 1
