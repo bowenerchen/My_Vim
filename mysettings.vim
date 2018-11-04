@@ -48,6 +48,7 @@ set guifont=ubuntu\ mono\ 16                    " Set Font Size
 set ignorecase
 set smartcase
 set scrolloff=7
+set t_BE=
 syntax on                                       " code show high light
 colorscheme molokai_dark
 
