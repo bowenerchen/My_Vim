@@ -9,7 +9,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-syntastic/syntastic'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tczengming/autoload_cscope.vim'
 Plugin 'Shougo/neocomplcache'
@@ -141,21 +141,21 @@ let g:tagbar_autoclose = 0
 nnoremap <silent> <leader>rr :TagbarToggle<cr>
 
 " syntastic
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol = '!E'
-let g:syntastic_style_error_symbol = '!E'
-let g:syntastic_warning_symbol = '?W'
-let g:syntastic_style_warning_symbol = '?W'
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_enable_signs = 0
+"let g:syntastic_error_symbol = 'E'
+"let g:syntastic_style_error_symbol = '!E'
+"let g:syntastic_warning_symbol = 'W'
+"let g:syntastic_style_warning_symbol = '?W'
+"let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-nnoremap <c-e> :Errors<cr>
-nnoremap <c-r> :lclose<cr>
-nnoremap <c-t> :SyntasticReset<cr>
-nnoremap <c-z> :lne<cr>
-nnoremap <c-f> :lp<cr>
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_aggregate_errors = 1
+"nnoremap <c-e> :Errors<cr>
+"nnoremap <c-r> :lclose<cr>
+"nnoremap <c-t> :SyntasticReset<cr>
+"nnoremap <c-z> :lne<cr>
+"nnoremap <c-f> :lp<cr>
 
 " vim-go
 let g:go_highlight_array_whitespace_error = 1
@@ -199,8 +199,10 @@ let g:neocomplcache_enable_auto_select = 1
 let g:Neocomplachetag=1
 
 "-----------------cscope-----------------
-if has("cscope")
+if has("/usr/bin/cscope")
 set csprg=/usr/bin/cscope
+elseif has("/usr/local/bin/cscope")
+set csprg=/usr/local/bin/cscope
 set csto=0
 set cst
 set nocsverb
@@ -244,3 +246,35 @@ let g:indentLine_color_term = 239
 "let g:indentLine_conceallevel = 1
 "let g:indentLine_bufNameExclude = ['NERD_tree.*','*.conf','*.txt']
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Python自动缩进
+Plugin 'vim-scripts/indentpython.vim'
+
+"PEP8代码风格检查
+Plugin 'nvie/vim-flake8'
+
+"git集成
+Plugin 'tpope/vim-fugitive'
+
+"let python_highlight_all=1
+"syntax on
+
+"au BufNewFile,BufRead *.py
+"\ set tabstop=4
+"\ set softtabstop=4
+"\ set shiftwidth=4
+"\ set textwidth=79
+"\ set expandtab
+"\ set autoindent
+"\ set fileformat=unix
+
+"au BufNewFile,BufRead *.js, *.html, *.css
+"\ set tabstop=2
+"\ set softtabstop=2
+"\ set shiftwidth=2
+
+"标注不必要的空格
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"支持utf-8
+set encoding=utf-8
