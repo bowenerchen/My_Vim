@@ -11,6 +11,13 @@
 aptget_ext=`which apt-get`
 apt_ext=`which apt`
 yum_ext=`which yum`
+brew_ext=`which brew`
+
+if [ ! -f "$brew_ext" ]
+then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 if [ -x "$apt_ext" ] 
 then
     sudo $apt_ext install git build-essential cmake python-dev python3-dev make
@@ -24,7 +31,11 @@ elif [ -x "$yum_ext" ]
 then
 
     sudo $yum_ext install git automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel make
-
+elif [ -x "$brew_ext" ]
+    #brew install vim
+    #brew install macvim
+    brew install ctags
+    brew install cscope
 fi
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
