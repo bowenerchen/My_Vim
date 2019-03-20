@@ -5,21 +5,21 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 "Basic Plugins
-Plugin 'vim-airline/vim-airline'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'majutsushi/tagbar'
 Plugin 'VundleVim/Vundle.vim'
 "Plugin 'vim-syntastic/syntastic'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 Plugin 'tczengming/autoload_cscope.vim'
 Plugin 'Shougo/neocomplcache'
-
-"go packages
-Plugin 'fatih/vim-go'
-Plugin 'nsf/gocode'
-"Plugin 'alecthomas/gometalinter'
+"
+""go packages
+"Plugin 'fatih/vim-go'
+"Plugin 'nsf/gocode'
+""Plugin 'alecthomas/gometalinter'
 Plugin 'kisielk/errcheck'
-Plugin 'zmb3/gogetdoc'
+"Plugin 'zmb3/gogetdoc'
 
 "added end
 call vundle#end()
@@ -99,9 +99,9 @@ let mapleader = ","
 ""================================
 "------------plugins-------------
 " airline parameters
-let g:airline_theme = 'dark'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline_theme = 'dark'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#buffer_nr_show = 1
 "let g:airline#extensions#whitespace#enabled = 0
 "let g:airline#extensions#whitespace#symbol = '!'
 "let g:airline_left_sep = ''
@@ -122,26 +122,26 @@ nnoremap <silent> <C-p> :bp<cr>
 nnoremap <silent> <C-g> :bd<cr>
 
 " NERDTree
-let g:NERDTreeWinPos = 'left'
-let g:NERDTreeWinSize = 20
-let g:NERDTreeShowLineNumbers = 0
-nnoremap <silent> <leader>ll :NERDTreeToggle<cr><c-w>p
+"let g:NERDTreeWinPos = 'left'
+"let g:NERDTreeWinSize = 20
+"let g:NERDTreeShowLineNumbers = 0
+"nnoremap <silent> <leader>ll :NERDTreeToggle<cr><c-w>p
 
 " tagbar
-let g:tagbar_type_go = {'ctagstype' : 'go', 'kinds' : ['p:package','i:imports:1', 'c:constants','v:variables','t:types', 'n:interfaces','w:fields','e:embedded', 'm:methods','r:constructor','f:functions'], 'sro' : '.','kind2scope' : {'t' : 'ctype', 'n' : 'ntype'},'scope2kind' : {'ctype' : 't', 'ntype' : 'n'},'ctagsbin'  : 'gotags', 'ctagsargs' : '-sort -silent'}
-let g:tagbar_autofocus = 0
-let g:tagbar_left = 0
-let g:tagbar_expand = 1
-let g:tagbar_compact = 1
-let g:tagbar_singleclick = 1
-let g:tagbar_autoshowtag = 1
-let g:tagbar_ctags_bin = 'ctags'
-let g:tagbar_width = 30
-let g:tagbar_autoclose = 0
-nnoremap <silent> <leader>rr :TagbarToggle<cr>
+"let g:tagbar_type_go = {'ctagstype' : 'go', 'kinds' : ['p:package','i:imports:1', 'c:constants','v:variables','t:types', 'n:interfaces','w:fields','e:embedded', 'm:methods','r:constructor','f:functions'], 'sro' : '.','kind2scope' : {'t' : 'ctype', 'n' : 'ntype'},'scope2kind' : {'ctype' : 't', 'ntype' : 'n'},'ctagsbin'  : 'gotags', 'ctagsargs' : '-sort -silent'}
+"let g:tagbar_autofocus = 0
+"let g:tagbar_left = 0
+"let g:tagbar_expand = 1
+"let g:tagbar_compact = 1
+"let g:tagbar_singleclick = 1
+"let g:tagbar_autoshowtag = 1
+"let g:tagbar_ctags_bin = 'ctags'
+"let g:tagbar_width = 30
+"let g:tagbar_autoclose = 0
+"nnoremap <silent> <leader>rr :TagbarToggle<cr>
 
 " syntastic
-let g:syntastic_enable_signs = 0
+"let g:syntastic_enable_signs = 0
 "let g:syntastic_error_symbol = 'E'
 "let g:syntastic_style_error_symbol = '!E'
 "let g:syntastic_warning_symbol = 'W'
@@ -158,35 +158,35 @@ let g:syntastic_enable_signs = 0
 "nnoremap <c-f> :lp<cr>
 
 " vim-go
-let g:go_highlight_array_whitespace_error = 1
-let g:go_highlight_chan_whitespace_error = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_space_tab_error = 1
-let g:go_highlight_trailing_whitespace_error = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_string_spellcheck = 1
-let g:go_highlight_format_strings = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_template_autocreate = 1
-let g:go_fmt_autosave = 1
-let g:go_def_mode = 'godef'
-let g:go_fmt_command = 'goimports'
-let g:go_get_update = 0
-let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter']
-let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
-let g:go_fmt_fail_silently = 1
-let g:go_list_type = 'quickfix'
-let g:go_def_reuse_buffer = 1
-let g:go_highlight_format_strings = 1
-let g:go_autodetect_gopath = 1
-let g:go_template_autocreate = 1
-let g:go_template_file = "hello_world.go"
-let g:go_template_test_file = "hello_world_test.go"
+"let g:go_highlight_array_whitespace_error = 1
+"let g:go_highlight_chan_whitespace_error = 1
+"let g:go_highlight_extra_types = 1
+"let g:go_highlight_space_tab_error = 1
+"let g:go_highlight_trailing_whitespace_error = 1
+"let g:go_highlight_generate_tags = 1
+"let g:go_highlight_string_spellcheck = 1
+"let g:go_highlight_format_strings = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_methods = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_types = 1
+"let g:go_highlight_operators = 1
+"let g:go_highlight_build_constraints = 1
+"let g:go_template_autocreate = 1
+"let g:go_fmt_autosave = 1
+"let g:go_def_mode = 'godef'
+"let g:go_fmt_command = 'goimports'
+"let g:go_get_update = 0
+"let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter']
+"let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
+"let g:go_fmt_fail_silently = 1
+"let g:go_list_type = 'quickfix'
+"let g:go_def_reuse_buffer = 1
+"let g:go_highlight_format_strings = 1
+"let g:go_autodetect_gopath = 1
+"let g:go_template_autocreate = 1
+"let g:go_template_file = "hello_world.go"
+"let g:go_template_test_file = "hello_world_test.go"
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
