@@ -241,9 +241,9 @@ nnoremap<C-u> :cn<cr>
 nnoremap<C-d> :cp<cr>
 
 " IndentLines
-let g:indentLine_enabled = 1
-let g:indentLine_char = '┊'
-let g:indentLine_color_term = 239
+"let g:indentLine_enabled = 1
+"let g:indentLine_char = '┊'
+"let g:indentLine_color_term = 239
 "let g:indentLine_concealcursor = 'inc'
 "set conceallevel=1
 "let g:indentLine_conceallevel = 1
@@ -278,6 +278,3 @@ Plugin 'tpope/vim-fugitive'
 
 "标注不必要的空格
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
-"支持utf-8
-set encoding=utf-8
