@@ -106,6 +106,8 @@ autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+" golang
+let g:go_disable_autoinstall = 0
 
 "-----------------
 " Plugin settings
