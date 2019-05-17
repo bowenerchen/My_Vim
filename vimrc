@@ -21,8 +21,9 @@ set background=dark
 " highlight current line
 "au WinLeave * set nocursorline nocursorcolumn
 "au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
-highlight CursorColumn ctermfg=gray ctermbg=darkblue cterm=bold guifg=white guibg=yellow gui=bold
+"set cursorline cursorcolumn
+"set cursorline
+"hi CursorLine   cterm=NONE ctermbg=darkmagenta
 
 " search
 set incsearch
