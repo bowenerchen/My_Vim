@@ -19,7 +19,7 @@ set background=dark
 " highlight current line
 "au WinLeave * set nocursorline nocursorcolumn
 "au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+"set cursorline cursorcolumn
 "set cursorline
 "hi CursorLine   cterm=NONE ctermbg=darkmagenta
 
