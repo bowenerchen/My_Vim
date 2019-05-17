@@ -3,6 +3,8 @@ source ~/.vim/bundles.vim
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
+set nocp
+
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
@@ -19,7 +21,7 @@ set background=dark
 " highlight current line
 "au WinLeave * set nocursorline nocursorcolumn
 "au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+"set cursorline cursorcolumn
 "set cursorline
 "hi CursorLine   cterm=NONE ctermbg=darkmagenta
 
@@ -103,6 +105,53 @@ let g:html_indent_style1 = "inc"
 "-----------------
 " Plugin settings
 "-----------------
+let mapleader = ","
+
+Plugin 'tczengming/autoload_cscope.vim'
+if has("/usr/bin/cscope")
+    set csprg=/usr/bin/cscope
+elseif has("/usr/local/bin/cscope")
+    set csprg=/usr/local/bin/cscope
+    set csto=0
+    set cst
+    set nocsverb
+    if filereadable("cscope.out")
+            cs add cscope.out
+        elseif $CSCOPE_DB != ""
+                cs add $CSCOPE_DB
+            endif
+            set csverb
+        endif
+        set cscopequickfix=s-,c-,d-,i-,t-,e-
+        set cscopetag
+let g:cscope_interested_files = '\.c$\|\.cpp$\|\.h$\|\.hpp$\|\.cc$\|\.java$\|\.go'
+"find symbol
+nnoremap <leader>fs :cs find s <C-R>=expand("<cword>")<CR><CR>
+"find definition
+nnoremap <leader>fd :cs find g <C-R>=expand("<cword>")<CR><CR>
+"find who has called me
+nnoremap <leader>fc :cs find c <C-R>=expand("<cword>")<CR><CR>
+"find this string
+nnoremap <leader>ft :cs find t <C-R>=expand("<cword>")<CR><CR>
+"find this egrep pattern
+nnoremap <leader>fe :cs find e <C-R>=expand("<cword>")<CR><CR>
+"find this file 
+nnoremap <leader>ff :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"find out which files had included this
+nnoremap <leader>fi :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
+nnoremap<C-u> :cn<cr>
+nnoremap<C-d> :cp<cr>
+
+
+"Python自动缩进
+Plugin 'vim-scripts/indentpython.vim'
+
+"PEP8代码风格检查
+Plugin 'nvie/vim-flake8'
+
+"git集成
+"Plugin 'tpope/vim-fugitive'
+
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -126,13 +175,36 @@ let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
 " tabbar
-let g:Tb_MaxSize = 2
-let g:Tb_TabWrap = 1
+"let g:Tb_MaxSize = 2
+"let g:Tb_TabWrap = 1
+"hi Tb_Normal guifg=white ctermfg=white
+"hi Tb_Changed guifg=green ctermfg=green
+"hi Tb_VisibleNormal ctermbg=252 ctermfg=235
+"hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
-hi Tb_Normal guifg=white ctermfg=white
-hi Tb_Changed guifg=green ctermfg=green
-hi Tb_VisibleNormal ctermbg=252 ctermfg=235
-hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
+Plugin 'vim-airline/vim-airline'
+" airline parameters
+let g:airline_theme = 'dark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#symbol = '!'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#show_close_button = 1
+let g:airline#extensions#tabline#close_symbol = 'X'
+let g:airline#extensions#ycm#enabled = 1
+let g:airline#extensions#ycm#error_symbol = 'E:'
+let g:airline#extensions#ycm#warning_symbol = 'W:'
+" switch to next buffer
+nnoremap <silent> <C-N> :bn<cr>
+nnoremap <silent> <C-B> :bp<cr>
+" close buffer or buffers,command :%bd will close all buffers
+nnoremap <silent> <C-G> :bd<cr>
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
@@ -216,8 +288,8 @@ let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 
 " SuperTab
 " let g:SuperTabDefultCompletionType='context'
-let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
-let g:SuperTabRetainCompletionType=2
+"let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
+"let g:SuperTabRetainCompletionType=2
 
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
@@ -274,23 +346,23 @@ nnoremap ; :
 :command QA qa
 
 " for macvim
-if has("gui_running")
-    set go=aAce  " remove toolbar
-    "set transparency=30
-    set guifont=Monaco:h13
-    set showtabline=2
-    set columns=140
-    set lines=40
-    noremap <D-M-Left> :tabprevious<cr>
-    noremap <D-M-Right> :tabnext<cr>
-    map <D-1> 1gt
-    map <D-2> 2gt
-    map <D-3> 3gt
-    map <D-4> 4gt
-    map <D-5> 5gt
-    map <D-6> 6gt
-    map <D-7> 7gt
-    map <D-8> 8gt
-    map <D-9> 9gt
-    map <D-0> :tablast<CR>
-endif
+"if has("gui_running")
+"    set go=aAce  " remove toolbar
+"    "set transparency=30
+"    set guifont=Monaco:h13
+"    set showtabline=2
+"    set columns=140
+"    set lines=40
+"    noremap <D-M-Left> :tabprevious<cr>
+"    noremap <D-M-Right> :tabnext<cr>
+"    map <D-1> 1gt
+"    map <D-2> 2gt
+"    map <D-3> 3gt
+"    map <D-4> 4gt
+"    map <D-5> 5gt
+"    map <D-6> 6gt
+"    map <D-7> 7gt
+"    map <D-8> 8gt
+"    map <D-9> 9gt
+"    map <D-0> :tablast<CR>
+"endif
