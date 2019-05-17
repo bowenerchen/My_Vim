@@ -135,7 +135,7 @@ nnoremap <leader>fc :cs find c <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>ft :cs find t <C-R>=expand("<cword>")<CR><CR>
 "find this egrep pattern
 nnoremap <leader>fe :cs find e <C-R>=expand("<cword>")<CR><CR>
-"find this file 
+"find this file
 nnoremap <leader>ff :cs find f <C-R>=expand("<cfile>")<CR><CR>
 "find out which files had included this
 nnoremap <leader>fi :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
