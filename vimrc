@@ -156,6 +156,10 @@ Plugin 'vim-scripts/indentpython.vim'
 "PEP8代码风格检查
 Plugin 'nvie/vim-flake8'
 
+"dbext
+Plugin 'dbext_2600'
+
+
 "git集成
 "Plugin 'tpope/vim-fugitive'
 
