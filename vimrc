@@ -2,8 +2,8 @@ source ~/.vim/bundles.vim
 
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-
-set nocp
+"
+"set nocp
 
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
@@ -19,33 +19,18 @@ set background=dark
 "colorscheme desert
 set t_Co=256
 set background=dark
-color molokai
-let g:molokai_original=1
-let g:rehash256=1
-
-" highlight current line
-"au WinLeave * set nocursorline nocursorcolumn
-"au WinEnter * set cursorline cursorcolumn
-"set cursorline cursorcolumn
-"set cursorline
-"hi CursorLine   cterm=NONE ctermbg=darkmagenta
 
 " search
 set incsearch
-"set highlight 	" conflict with highlight current line
 set ignorecase
 set smartcase
 
 " editor settings
-"set history=1000
-" Default Indentation
 set autoindent
 set smartindent     " indent when
 set tabstop=4       " tab width
 set softtabstop=4   " backspace
 set shiftwidth=4    " indent width
-" set textwidth=79
-" set smarttab
 set expandtab       " expand tab to space
 
 " Added By MySelf
@@ -70,7 +55,6 @@ set guifont=ubuntu\ mono\ 16                    " Set Font Size
 set ignorecase
 set smartcase
 set scrolloff=7
-set t_BE=
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
@@ -79,7 +63,6 @@ set nofoldenable                                                  " disable fold
 set confirm                                                       " prompt when existing from an unsaved file
 set backspace=indent,eol,start                                    " More powerful backspacing
 set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors "
-"set mouse=a                                                       " use mouse in all modes
 set selection=inclusive
 set selectmode=mouse,key
 set report=0                                                      " always report number of lines changed                "
@@ -90,7 +73,6 @@ set title                                                         " show file in
 set laststatus=2                                                  " use 2 lines for the status bar
 set matchtime=2                                                   " show matching bracket for 0.2 seconds
 set matchpairs+=<:>                                               " specially for html
-" set relativenumber
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -279,7 +261,7 @@ let g:neoComplcache_disableautocomplete=1
 let g:neocomplcache_enable_smart_case=1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-set completeopt-=preview
+"set completeopt-=preview
 
 imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
 smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
@@ -336,6 +318,7 @@ autocmd BufReadPost *
 
 " w!! to sudo & write a file
 cmap w!! %!sudo tee >/dev/null %
+
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
