@@ -173,12 +173,12 @@ let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
 " tabbar
-"let g:Tb_MaxSize = 2
-"let g:Tb_TabWrap = 1
-"hi Tb_Normal guifg=white ctermfg=white
-"hi Tb_Changed guifg=green ctermfg=green
-"hi Tb_VisibleNormal ctermbg=252 ctermfg=235
-"hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
+let g:Tb_MaxSize = 2
+let g:Tb_TabWrap = 1
+hi Tb_Normal guifg=white ctermfg=white
+hi Tb_Changed guifg=green ctermfg=green
+hi Tb_VisibleNormal ctermbg=252 ctermfg=235
+hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
 "Plugin 'vim-airline/vim-airline'
 " airline parameters
@@ -205,58 +205,58 @@ nnoremap <silent> <C-B> :bp<cr>
 nnoremap <silent> <C-G> :bd<cr>
 
 " easy-motion
-"let g:EasyMotion_leader_key = '<Leader>'
+let g:EasyMotion_leader_key = '<Leader>'
 
 " Tagbar
-"let g:tagbar_left=1
-"let g:tagbar_width=30
-"let g:tagbar_autofocus = 1
-"let g:tagbar_sort = 0
-"let g:tagbar_compact = 1
+let g:tagbar_left=1
+let g:tagbar_width=30
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
+let g:tagbar_compact = 1
 " tag for coffee
-"if executable('coffeetags')
-"  let g:tagbar_type_coffee = {
-"        \ 'ctagsbin' : 'coffeetags',
-"        \ 'ctagsargs' : '',
-"        \ 'kinds' : [
-"        \ 'f:functions',
-"        \ 'o:object',
-"        \ ],
-"        \ 'sro' : ".",
-"        \ 'kind2scope' : {
-"        \ 'f' : 'object',
-"        \ 'o' : 'object',
-"        \ }
-"        \ }
-"
-"  let g:tagbar_type_markdown = {
-"    \ 'ctagstype' : 'markdown',
-"    \ 'sort' : 0,
-"    \ 'kinds' : [
-"        \ 'h:sections'
-"    \ ]
-"    \ }
-"endif
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+
+  let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'sort' : 0,
+    \ 'kinds' : [
+        \ 'h:sections'
+    \ ]
+    \ }
+endif
 
 " Nerd Tree
-"let NERDChristmasTree=0
-"let NERDTreeWinSize=30
-"let NERDTreeChDirMode=2
-"let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
-" let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
-"let NERDTreeShowBookmarks=1
-"let NERDTreeWinPos = "right"
+let NERDChristmasTree=0
+let NERDTreeWinSize=30
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeShowBookmarks=1
+let NERDTreeWinPos = "right"
 
 " nerdcommenter
-"let NERDSpaceDelims=1
+let NERDSpaceDelims=1
 " nmap <D-/> :NERDComToggleComment<cr>
-"let NERDCompactSexyComs=1
+let NERDCompactSexyComs=1
 
 " ZenCoding
-"let g:user_emmet_expandabbr_key='<C-j>'
+let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
@@ -290,8 +290,8 @@ let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 "let g:SuperTabRetainCompletionType=2
 
 " ctrlp
-"set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
-"let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Keybindings for plugin toggle
 "nnoremap <F2> :set invpaste paste?<CR>
@@ -308,10 +308,10 @@ let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 " Useful Functions
 "------------------
 " easier navigation between split windows
-"nnoremap <c-j> <c-w>j
-"nnoremap <c-k> <c-w>k
-"nnoremap <c-h> <c-w>h
-"nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
