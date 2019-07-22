@@ -19,22 +19,19 @@ syntax on
 "hi CursorLine   cterm=NONE ctermbg=darkmagenta
 
 " search
-"set incsearch
-"set highlight 	" conflict with highlight current line
-"set ignorecase
-"set smartcase
+set incsearch
+set ignorecase
+set smartcase
 
-" editor settings
-"set history=1000
 " Default Indentation
-"set autoindent
-"set smartindent     " indent when
-"set tabstop=4       " tab width
-"set softtabstop=4   " backspace
-"set shiftwidth=4    " indent width
-"set textwidth=79
-"set smarttab
-"set expandtab       " expand tab to space
+set autoindent
+set smartindent     " indent when
+set tabstop=4       " tab width
+set softtabstop=4   " backspace
+set shiftwidth=4    " indent width
+set textwidth=79
+set smarttab
+set expandtab       " expand tab to space
 
 " Added By MySelf
 highlight LineNr ctermfg=Gray
@@ -53,7 +50,7 @@ set incsearch                                   " Search while input key words
 set number                                      " Show line number
 set laststatus=2                                " Always show the status line
 set backspace=indent,eol,start                  " Set backspace can delete all words
-"set guifont=ubuntu\ mono\ 16                    " Set Font Size
+set guifont=ubuntu\ mono\ 16                    " Set Font Size
 set ignorecase
 set smartcase
 "set scrolloff=7
@@ -256,7 +253,7 @@ let NERDCompactSexyComs=1
 let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
@@ -266,7 +263,6 @@ let g:neoComplcache_disableautocomplete=1
 let g:neocomplcache_enable_smart_case=1
 "let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-set completeopt-=preview
 
 imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
 smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
