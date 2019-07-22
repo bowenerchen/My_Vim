@@ -37,8 +37,8 @@ syntax on
 "set expandtab       " expand tab to space
 
 " Added By MySelf
-"highlight LineNr ctermfg=Gray
-"highlight LineNr ctermbg=black
+highlight LineNr ctermfg=Gray
+"highlight LineNr ctermbg=Darkblue
 set hlsearch                                    " High light search
 set ts=4                                        " 1 tab = 4 space
 set sw=4                                        " Tab width
