@@ -256,7 +256,7 @@ let NERDCompactSexyComs=1
 let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
@@ -347,7 +347,7 @@ nnoremap ; :
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
-    set guifont=Monaco:h13
+    "set guifont=Monaco:h13
     set showtabline=2
     set columns=140
     set lines=40
