@@ -66,7 +66,7 @@ set t_Co=256                                                      " Explicitly t
 set selection=inclusive
 set selectmode=mouse,key
 set report=0                                                      " always report number of lines changed                "
-set nowrap                                                        " dont wrap lines
+"set nowrap                                                        " dont wrap lines
 set scrolloff=5                                                   " 5 lines above/below cursor when scrolling
 set showcmd                                                       " show typed command in status bar
 set title                                                         " show file in titlebar
