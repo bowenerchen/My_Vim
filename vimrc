@@ -139,7 +139,7 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
 
 "dbext
-Plugin 'dbext_2600'
+"Plugin 'dbext_2600'
 
 
 "git集成
