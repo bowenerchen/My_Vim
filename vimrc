@@ -141,7 +141,7 @@ Plugin 'nvie/vim-flake8'
 
 
 "git集成
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
