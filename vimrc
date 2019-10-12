@@ -13,8 +13,6 @@ syntax on
 "--------
 " Vim UI
 "--------
-" color scheme
-set background=dark
 "colorscheme desert
 set t_Co=256
 set background=dark
