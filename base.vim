@@ -37,7 +37,7 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 let g:rbpt_max = 16
-autocmd Syntax lisp,scheme,clojure,racket,RainbowParenthesesToggle
+" autocmd Syntax lisp,scheme,clojure,racket,RainbowParenthesesToggle
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *

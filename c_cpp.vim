@@ -123,7 +123,6 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_pattern_options = {
 \ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
 \ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
-\ '\.min\.vim$': {'ale_linters': [], 'ale_fixers': []},
 \ '\.min\.conf$': {'ale_linters': [], 'ale_fixers': []},
 \ '\.min\.py$': {'ale_linters': ['flake8'], 'ale_fixers': ['yapf']},
 \}
