@@ -3,7 +3,6 @@ scriptencoding
 set nocompatible
 
 set number " 设置行号
-set cursorline "突出显示当前行
 
 " enable syntax hightlight and completion
 syntax on

@@ -124,3 +124,6 @@ let g:Powerline_symbols = 'fancy'
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
+
+highlight Cursor guifg=green guibg=green
+highlight iCursor guifg=red guibg=steelblue
