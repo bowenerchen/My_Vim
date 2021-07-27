@@ -7,40 +7,45 @@ set tags=tags
 "-----------------
 " cscope plugin settings
 "-----------------
-let mapleader = ","
-if has("/usr/bin/cscope")
-    set csprg=/usr/bin/cscope
-elseif has("/usr/local/bin/cscope")
-    set csprg=/usr/local/bin/cscope
-    set csto=0
-    set cst
-    set nocsverb
-if filereadable("cscope.out")
-        cs add cscope.out
-elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-endif
-set csverb
+if has("cscope")  
+    set csprg=/usr/bin/cscope  
+    set csto=0 
+    set cst  
+    set csverb  
+    set cspc=3 
+    "add any database in current dir  
+    if filereadable("cscope.out")  
+        cs add cscope.out  
+    "else search cscope.out elsewhere  
+    else 
+        let cscope_file=findfile("cscope.out",".;")  
+        let cscope_pre=matchstr(cscope_file,".*/")  
+        if !empty(cscope_file) && filereadable(cscope_file)  
+            set nocsverb
+            exe "cs add" cscope_file cscope_pre
+            set csverb
+        endif        
+    endif  
 endif
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 set cscopetag
 let g:cscope_interested_files = '\.c$\|\.cpp$\|\.h$\|\.hpp$\|\.cc$|\.cxx$'
 "find symbol
-nnoremap <leader>fs :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>fs :cs find s <C-R>=expand("<cword>")<CR><CR>
 "find definition
-nnoremap <leader>fd :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>fd :cs find g <C-R>=expand("<cword>")<CR><CR>
 "find who has called me
-nnoremap <leader>fc :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>fc :cs find c <C-R>=expand("<cword>")<CR><CR>
 "find this string
-nnoremap <leader>ft :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>ft :cs find t <C-R>=expand("<cword>")<CR><CR>
 "find this egrep pattern
-nnoremap <leader>fe :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>fe :cs find e <C-R>=expand("<cword>")<CR><CR>
 "find this file
-nnoremap <leader>ff :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>ff :cs find f <C-R>=expand("<cfile>")<CR><CR>
 "find out which files had included this
-nnoremap <leader>fi :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
-nnoremap<C-u> :cn<cr>
-nnoremap<C-d> :cp<cr>
+nmap <leader>fi :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
+nmap<C-u> :cn<cr>
+nmap<C-d> :cp<cr>
 
 
 "-----------------
@@ -111,7 +116,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_enter = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'

@@ -1,5 +1,15 @@
+scriptencoding
+" 关闭兼容模式
+set nocompatible
+
+set number " 设置行号
+set cursorline "突出显示当前行
+
 " enable syntax hightlight and completion
 syntax on
+
+" leader
+let mapleader=','
 
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
@@ -27,7 +37,7 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 let g:rbpt_max = 16
-autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
+autocmd Syntax lisp,scheme,clojure,racket,RainbowParenthesesToggle
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *

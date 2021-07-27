@@ -47,7 +47,8 @@ Bundle 'ryanoasis/vim-devicons'
 " Bundle 'humiaozuzu/TabBar'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'w0rp/ale'
@@ -88,6 +89,9 @@ Bundle 'tpope/vim-markdown'
 
 "------- Go ----------
 Bundle 'fatih/vim-go'
+Bundle 'cespare/vim-golang'
+Bundle 'dgryski/vim-godef'
+Bundle 'Blackrush/vim-gocode'
 
 "------- FPs ------
 Bundle 'kien/rainbow_parentheses.vim'
